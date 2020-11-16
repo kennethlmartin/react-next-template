@@ -1,0 +1,9 @@
+.DS_Store
+.env
+.nodemon-find-ref
+.*cache
+*.log
+*.swp
+/.next/
+/.vscode/
+/node_modules/

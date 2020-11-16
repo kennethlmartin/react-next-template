@@ -1,0 +1,37 @@
+{
+  "name": "react-next-template",
+  "version": "1.0.0",
+  "author": "Kenneth Martin <developer@kennethmartin.me>",
+  "description": "",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kennethlmartin/react-next-template.git"
+  },
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "lint:eslint": "eslint . --cache",
+    "lint:prettier": "prettier --check './**/*.js'",
+    "lint:stylelint": "stylelint --syntax css-in-js .",
+    "release": "semantic-release",
+    "start": "next start",
+    "test:lint": "npm-run-all lint:* -p"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-export-default-from": "7.12.1",
+    "@emotion/babel-plugin": "11.0.0",
+    "eslint-config-archetype": "5.2.0",
+    "npm-run-all": "4.1.5",
+    "prettier-config-archetype": "1.0.0",
+    "stylelint-config-archetype": "3.2.0",
+    "stylelint-config-prettier": "8.0.2"
+  },
+  "dependencies": {
+    "@emotion/react": "11.0.0",
+    "@emotion/styled": "11.0.0",
+    "next": "10.0.1",
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
+  }
+}
