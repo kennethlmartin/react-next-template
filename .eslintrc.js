@@ -1,4 +1,4 @@
 module.exports = {
-  extends: ['archetype/configurations/node'],
+  extends: ['archetype/configurations/node', 'archetype/rules/plugin-prettier'],
   root: true,
 };
