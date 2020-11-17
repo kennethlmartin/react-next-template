@@ -18,9 +18,14 @@ const makeGlobalStyles = (theme) => css`
   }
 
   body {
-    background-color: ${theme.backgroundColor};
-    color: ${theme.color};
-    font-family: ${theme.fontFamily};
+    background-color: ${theme.colors[50]};
+    color: ${theme.colors[800]};
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+      Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  }
+
+  a {
+    color: ${theme.colors[800]};
   }
 
   #__next {

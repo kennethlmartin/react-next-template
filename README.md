@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://nextjs.org/">
-    <img src="https://i.ibb.co/gDDTKt5/react-next-template.png" width="360" />
+    <img src="https://i.ibb.co/pPBdfRv/react-next-template.png" width="360" />
   </a>
 </div>
 
@@ -8,14 +8,14 @@
 
 <div align="center">
 
-  [![Badge One](https://img.shields.io/badge/badge--one-0a263d?style=for-the-badge&logoColor=white)](https://github.com/kennethlmartin/react-next-template)
-  [![Badge Two](https://img.shields.io/badge/badge--two-0a263d?style=for-the-badge&logoColor=white)](https://github.com/kennethlmartin/react-next-template)
-  [![Badge Three](https://img.shields.io/badge/badge--three-0a263d?style=for-the-badge&logoColor=white)](https://github.com/kennethlmartin/react-next-template)
+  [![Badge One](https://img.shields.io/badge/badge--one-4d56b2?style=for-the-badge&logoColor=white)](https://github.com/kennethlmartin/react-next-template)
+  [![Badge Two](https://img.shields.io/badge/badge--two-4d56b2?style=for-the-badge&logoColor=white)](https://github.com/kennethlmartin/react-next-template)
+  [![Badge Three](https://img.shields.io/badge/badge--three-4d56b2?style=for-the-badge&logoColor=white)](https://github.com/kennethlmartin/react-next-template)
 </div>
 
 ---
 
-*copy generated from [startupsum](https://startupsum.com/https://startupsum.com/)*
+*copy generated from [startupsum](https://startupsum.com/)*
 
 Long tail startup gen-z traction investor bootstrapping ecosystem venture leverage validation. Agile development success marketing stealth business-to-business vesting period. Business model canvas virality business-to-consumer gamification assets deployment buyer long tail. Deployment startup incubator early adopters.
 
