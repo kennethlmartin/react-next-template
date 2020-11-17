@@ -1,9 +1,10 @@
 module.exports = {
-  extends: ['archetype/configurations/react', 'archetype/rules/plugin-jsdoc'],
+  extends: [
+    'archetype/configurations/react',
+    'archetype/rules/plugin-jsdoc',
+    'archetype/rules/plugin-prettier',
+  ],
   root: true,
-  rules: {
-    'react/jsx-no-literals': 'off',
-  },
   settings: {
     'import/resolver': {
       node: {
