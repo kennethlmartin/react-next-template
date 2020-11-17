@@ -2,11 +2,14 @@
   "name": "react-next-template",
   "version": "1.0.0",
   "author": "Kenneth Martin <developer@kennethmartin.me>",
-  "description": "",
+  "description": "Boilerplate for Next.js projects",
   "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/kennethlmartin/react-next-template.git"
+  },
+  "engines": {
+    "node": ">=15"
   },
   "scripts": {
     "build": "next build",
