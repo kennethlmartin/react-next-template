@@ -1,7 +1,7 @@
 import { combineReducers } from '@reduxjs/toolkit';
 import { HYDRATE } from 'next-redux-wrapper';
 
-import app from './reducers/app';
+import app from 'src/state/reducers/app';
 
 const combinedReducer = combineReducers({
   app,

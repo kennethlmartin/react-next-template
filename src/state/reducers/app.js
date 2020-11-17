@@ -1,5 +1,5 @@
 import { createReducer } from '@reduxjs/toolkit';
-import * as actions from '../actions';
+import * as actions from 'src/state/actions';
 
 const INITIAL_STATE = {
   theme: 'light',

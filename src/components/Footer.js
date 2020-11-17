@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 
-import Content from './Content';
+import Content from 'src/components/Content';
 
 const Footer = styled.footer`
   background-color: ${(props) => props.theme.colors[200]};

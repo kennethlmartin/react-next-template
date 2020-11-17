@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
-import Content from '../components/Content';
-import Layout from '../components/Layout';
+import Content from 'src/components/Content';
+import Layout from 'src/components/Layout';
 
 const PageHome = () => (
   <Layout>

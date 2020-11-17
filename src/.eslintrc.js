@@ -4,4 +4,12 @@ module.exports = {
   rules: {
     'react/jsx-no-literals': 'off',
   },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.json'],
+        moduleDirectory: ['node_modules', '.'],
+      },
+    },
+  },
 };

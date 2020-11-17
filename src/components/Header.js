@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import styled from '@emotion/styled';
 
-import Content from './Content';
-import ThemeToggle from './ThemeToggle';
+import Content from 'src/components/Content';
+import ThemeToggle from 'src/components/ThemeToggle';
 
 const Header = styled.header`
   background-color: ${(props) => props.theme.colors[200]};

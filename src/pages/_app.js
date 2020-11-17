@@ -3,10 +3,10 @@ import Head from 'next/head';
 import { ThemeProvider } from '@emotion/react';
 import { useSelector } from 'react-redux';
 
-import GlobalStyles from '../components/GlobalStyles';
-import themes from '../themes';
-import { wrapper } from '../state/store';
-import { selectTheme } from '../state/selectors';
+import GlobalStyles from 'src/components/GlobalStyles';
+import themes from 'src/themes';
+import { wrapper } from 'src/state/store';
+import { selectTheme } from 'src/state/selectors';
 
 const App = ({ Component, pageProps }) => {
   const theme = useSelector(selectTheme);

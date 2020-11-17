@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { Fragment } from 'react';
 
-import Footer from './Footer';
-import Header from './Header';
+import Footer from 'src/components/Footer';
+import Header from 'src/components/Header';
 
 const Main = styled.main`
   flex: 1;

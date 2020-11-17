@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { themeUpdated } from '../state/actions';
-import { selectTheme } from '../state/selectors';
+import { themeUpdated } from 'src/state/actions';
+import { selectTheme } from 'src/state/selectors';
 
 const Toggle = styled.span`
   cursor: pointer;

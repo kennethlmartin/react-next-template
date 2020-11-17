@@ -2,8 +2,8 @@ import createSagaMiddleware from 'redux-saga';
 import { createWrapper } from 'next-redux-wrapper';
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 
-import { rootReducer } from './rootReducer';
-import { rootSaga } from './rootSaga';
+import { rootReducer } from 'src/state/rootReducer';
+import { rootSaga } from 'src/state/rootSaga';
 
 export const makeStore = () => {
   const sagaMiddleware = createSagaMiddleware();
