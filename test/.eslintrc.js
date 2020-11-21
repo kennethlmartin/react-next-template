@@ -1,3 +1,6 @@
 module.exports = {
-  extends: ['archetype/configurations/react'],
+  extends: [
+    'archetype/configurations/react',
+    'archetype/rules/plugin-prettier',
+  ],
 };
