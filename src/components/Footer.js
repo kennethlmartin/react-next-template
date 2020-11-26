@@ -6,7 +6,7 @@ import Content from 'src/components/Content';
 const Footer = styled.footer`
   background-color: ${(props) => props.theme.colors[200]};
   height: 100px;
-  dpadding: 1em 0;
+  padding: 1em 0;
 `;
 
 const _Footer = () => (
