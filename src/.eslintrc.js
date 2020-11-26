@@ -8,7 +8,7 @@ module.exports = {
   settings: {
     'import/resolver': {
       node: {
-        extensions: ['.js', '.json'],
+        extensions: ['.js', '.json', 'ts', '.tsx'],
         moduleDirectory: ['node_modules', '.'],
       },
     },
