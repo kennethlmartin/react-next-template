@@ -7,4 +7,6 @@ const Content = styled.div`
   width: 100%;
 `;
 
+const testError;
+
 export default Content;
