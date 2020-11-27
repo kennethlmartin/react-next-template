@@ -4,6 +4,7 @@
 .*cache
 *.log
 *.swp
+/.coverage/
 /.next/
 /.vscode/
 /node_modules/

@@ -22,6 +22,7 @@
     "start": "next start",
     "start:dev": "next dev",
     "test": "jest",
+    "test:coverage": "jest --coverage",
     "test:lint": "npm-run-all lint:* -p"
   },
   "devDependencies": {
