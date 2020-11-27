@@ -23,7 +23,8 @@
     "start:dev": "next dev",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "test:lint": "npm-run-all lint:* -p"
+    "test:lint": "npm-run-all lint:* -p",
+    "test:watch": "jest --watchAll"
   },
   "devDependencies": {
     "@babel/plugin-proposal-export-default-from": "7.12.1",
