@@ -16,6 +16,7 @@
     "build": "next build",
     "build:analyze": "ANALYZE=true next build",
     "build:sitemap": "next-sitemap",
+    "lint": "npm-run-all lint:* -p",
     "lint:eslint": "eslint . --cache",
     "lint:prettier": "prettier --check './**/*.js'",
     "lint:stylelint": "stylelint --syntax css-in-js .",
@@ -23,7 +24,6 @@
     "start:dev": "next dev",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "test:lint": "npm-run-all lint:* -p",
     "test:watch": "jest --watchAll"
   },
   "devDependencies": {
