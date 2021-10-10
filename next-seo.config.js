@@ -1,4 +1,4 @@
-const COMPANY_TITLE = 'Example';
+const COMPANY_TITLE = 'React Next Template';
 
 module.exports = {
   defaultTitle: COMPANY_TITLE,
