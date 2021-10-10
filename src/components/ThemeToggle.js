@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'next-i18next';
 
-import { themeUpdated } from 'src/state/actions';
+import { themeSelected } from 'src/state/actions';
 import { selectTheme } from 'src/state/selectors';
 
 const Toggle = styled.span`
@@ -20,9 +20,9 @@ export const ThemeToggle = () => {
 
   const handleClick = () => {
     if (theme === 'light') {
-      dispatch(themeUpdated('dark'));
+      dispatch(themeSelected('dark'));
     } else {
-      dispatch(themeUpdated('light'));
+      dispatch(themeSelected('light'));
     }
   };
 

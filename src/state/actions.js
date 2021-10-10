@@ -1,3 +1,3 @@
 import { createAction } from '@reduxjs/toolkit';
 
-export const themeUpdated = createAction('counter/themeUpdated');
+export const themeSelected = createAction('theme/selected');

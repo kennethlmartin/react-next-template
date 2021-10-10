@@ -11,7 +11,7 @@ export const setTheme = (state, { payload }) => ({
 });
 
 const reducer = createReducer(INITIAL_STATE, (builder) => {
-  builder.addCase(actions.themeUpdated, setTheme);
+  builder.addCase(actions.themeSelected, setTheme);
 });
 
 export default reducer;
