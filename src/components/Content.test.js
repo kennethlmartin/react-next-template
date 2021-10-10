@@ -1,8 +1,8 @@
 import { render } from 'test/react-testing-library';
 
-import Content from './Content';
+import { Content } from './Content';
 
 it('renders without crashing', () => {
-  const { asFragment } = render(<Content />);
-  expect(asFragment(<Content />)).toMatchSnapshot();
+  const { container } = render(<Content />);
+  expect(container).toMatchSnapshot();
 });

@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import styled from '@emotion/styled';
 
-import Content from 'src/components/Content';
-import ThemeToggle from 'src/components/ThemeToggle';
+import { Content } from 'src/components/Content';
+import { ThemeToggle } from 'src/components/ThemeToggle';
 
-const Header = styled.header`
+const Wrapper = styled.header`
   background-color: ${(props) => props.theme.colors[200]};
   padding: 1em 0;
 `;
@@ -25,8 +25,8 @@ const ListItem = styled.li`
   padding: 0 1em;
 `;
 
-const _Header = () => (
-  <Header>
+export const Header = () => (
+  <Wrapper>
     <Content>
       <Nav>
         <Link href="/">
@@ -42,7 +42,5 @@ const _Header = () => (
         <ThemeToggle />
       </Nav>
     </Content>
-  </Header>
+  </Wrapper>
 );
-
-export default _Header;

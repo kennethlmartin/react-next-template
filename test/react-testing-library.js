@@ -4,7 +4,7 @@ import { render } from '@testing-library/react';
 import { ThemeProvider } from '@emotion/react';
 import { Provider } from 'react-redux';
 
-import themes from '../src/themes';
+import * as themes from '../src/themes';
 
 const mockStore = configureMockStore();
 const store = mockStore({});

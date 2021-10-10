@@ -12,7 +12,7 @@ const Toggle = styled.span`
   }
 `;
 
-const ThemeToggle = () => {
+export const ThemeToggle = () => {
   const dispatch = useDispatch();
   const theme = useSelector(selectTheme);
 
@@ -26,5 +26,3 @@ const ThemeToggle = () => {
 
   return <Toggle onClick={handleClick}>{theme}</Toggle>;
 };
-
-export default ThemeToggle;

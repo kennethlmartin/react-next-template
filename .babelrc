@@ -10,8 +10,5 @@
       }
     ]
   ],
-  "plugins": [
-    "@babel/plugin-proposal-export-default-from",
-    "@emotion"
-  ]
+  "plugins": ["@emotion"]
 }

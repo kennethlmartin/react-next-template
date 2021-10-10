@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 
-export default css`
+export const normalize = css`
   /* stylelint-disable */
   html {
     line-height: 1.15;

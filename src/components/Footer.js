@@ -1,22 +1,20 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 
-import Content from 'src/components/Content';
+import { Content } from 'src/components/Content';
 
-const Footer = styled.footer`
+const Wrapper = styled.footer`
   background-color: ${(props) => props.theme.colors[200]};
   height: 100px;
   padding: 1em 0;
 `;
 
-const _Footer = () => (
-  <Footer
+export const Footer = () => (
+  <Wrapper
     css={css`
       text-align: center;
     `}
   >
     <Content>Footer</Content>
-  </Footer>
+  </Wrapper>
 );
-
-export default _Footer;
