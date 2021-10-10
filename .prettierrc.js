@@ -1,1 +1,6 @@
-module.exports = require('prettier-config-archetype');
+const prettierConfigArchetype = require('prettier-config-archetype');
+
+module.exports = {
+  ...prettierConfigArchetype,
+  parser: 'babel-ts',
+};
