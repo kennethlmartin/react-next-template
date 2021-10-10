@@ -1,5 +1,7 @@
+import * as R from 'ramda';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
+import { appWithTranslation } from 'next-i18next';
 import { DefaultSeo } from 'next-seo';
 import { ThemeProvider } from '@emotion/react';
 import { useSelector } from 'react-redux';
@@ -32,4 +34,4 @@ App.propTypes = {
   pageProps: PropTypes.object,
 };
 
-export default wrapper.withRedux(App);
+export default R.compose(wrapper.withRedux, appWithTranslation)(App);

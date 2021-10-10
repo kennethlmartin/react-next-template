@@ -1,23 +1,32 @@
 import { NextSeo } from 'next-seo';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 
 import { Content } from 'src/components/Content';
 import { Layout } from 'src/components/Layout';
 
-const PageFoo = () => (
-  <Layout>
-    <NextSeo title="Hello World" />
-    <Content>
-      <h1>Hello World</h1>
-      <p>
-        Hackathon gamification monetization low hanging fruit strategy customer.
-        Prototype direct mailing business-to-business funding early adopters
-        market infrastructure A/B testing assets marketing. Freemium sales
-        bootstrapping infrastructure android vesting period deployment
-        disruptive. Investor interaction design buyer direct mailing metrics
-        responsive web design.
-      </p>
-    </Content>
-  </Layout>
-);
+const PageHelloWorld = () => {
+  const { t } = useTranslation();
 
-export default PageFoo;
+  return (
+    <Layout>
+      <NextSeo title={t('page-hello-world:meta.title')} />
+      <Content>
+        <h1>{t('page-hello-world:heading')}</h1>
+        <p>{t('page-hello-world:body')}</p>
+      </Content>
+    </Layout>
+  );
+};
+
+export const getStaticProps = async ({ locale }) => {
+  const i18n = await serverSideTranslations(locale);
+
+  return {
+    props: {
+      ...i18n,
+    },
+  };
+};
+
+export default PageHelloWorld;

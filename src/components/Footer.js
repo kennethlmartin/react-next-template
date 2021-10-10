@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
+import { useTranslation } from 'next-i18next';
 
 import { Content } from 'src/components/Content';
 
@@ -9,12 +10,16 @@ const Wrapper = styled.footer`
   padding: 1em 0;
 `;
 
-export const Footer = () => (
-  <Wrapper
-    css={css`
-      text-align: center;
-    `}
-  >
-    <Content>Footer</Content>
-  </Wrapper>
-);
+export const Footer = () => {
+  const { t } = useTranslation();
+
+  return (
+    <Wrapper
+      css={css`
+        text-align: center;
+      `}
+    >
+      <Content>{t('footer:footer')}</Content>
+    </Wrapper>
+  );
+};

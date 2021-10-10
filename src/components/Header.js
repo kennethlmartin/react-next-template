@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styled from '@emotion/styled';
+import { useTranslation } from 'next-i18next';
 
 import { Content } from 'src/components/Content';
 import { ThemeToggle } from 'src/components/ThemeToggle';
@@ -25,22 +26,26 @@ const ListItem = styled.li`
   padding: 0 1em;
 `;
 
-export const Header = () => (
-  <Wrapper>
-    <Content>
-      <Nav>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-        <List>
-          <ListItem>
-            <Link href="/hello-world">
-              <a>Hello World</a>
-            </Link>
-          </ListItem>
-        </List>
-        <ThemeToggle />
-      </Nav>
-    </Content>
-  </Wrapper>
-);
+export const Header = () => {
+  const { t } = useTranslation();
+
+  return (
+    <Wrapper>
+      <Content>
+        <Nav>
+          <Link href="/">
+            <a>{t('header:home')}</a>
+          </Link>
+          <List>
+            <ListItem>
+              <Link href="/hello-world">
+                <a>{t('header:helloWorld')}</a>
+              </Link>
+            </ListItem>
+          </List>
+          <ThemeToggle />
+        </Nav>
+      </Content>
+    </Wrapper>
+  );
+};

@@ -6,6 +6,6 @@
 const COMPANY_TITLE = 'Example';
 
 module.exports = {
-  titleTemplate: `${COMPANY_TITLE} | %s`,
   defaultTitle: COMPANY_TITLE,
+  titleTemplate: `${COMPANY_TITLE} | %s`,
 };
