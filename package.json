@@ -9,8 +9,8 @@
     "url": "https://github.com/kennethlmartin/react-next-template.git"
   },
   "engines": {
-    "node": ">=15.x",
-    "npm": ">=7.x"
+    "node": ">=16",
+    "npm": ">=7"
   },
   "scripts": {
     "build": "next build",
