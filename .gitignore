@@ -1,9 +1,6 @@
-.DS_Store
-.env
-.nodemon-find-ref
+.env*
 .*cache
 *.log
-*.swp
 /.coverage/
 /.next/
 /.vscode/
