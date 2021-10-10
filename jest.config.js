@@ -4,6 +4,7 @@ module.exports = {
   moduleDirectories: ['node_modules', '<rootDir>'],
   setupFilesAfterEnv: ['<rootDir>/test/setupTests.js'],
   snapshotSerializers: ['@emotion/jest/serializer'],
+  testEnvironment: 'jsdom',
   testPathIgnorePatterns: ['/node_modules/', '/.next/'],
   verbose: true,
 };
