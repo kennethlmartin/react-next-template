@@ -1,13 +1,11 @@
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 
 import { Content } from 'src/components/Content';
 import { Layout } from 'src/components/Layout';
 
 const PageFoo = () => (
   <Layout>
-    <Head>
-      <title>Hello World</title>
-    </Head>
+    <NextSeo title="Hello World" />
     <Content>
       <h1>Hello World</h1>
       <p>

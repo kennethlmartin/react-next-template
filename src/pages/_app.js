@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
 import Head from 'next/head';
+import { DefaultSeo } from 'next-seo';
 import { ThemeProvider } from '@emotion/react';
 import { useSelector } from 'react-redux';
 
 import * as themes from 'src/themes';
+import NextSeoConfig from 'next-seo.config';
 import { GlobalStyles } from 'src/components/GlobalStyles';
 import { selectTheme } from 'src/state/selectors';
 import { wrapper } from 'src/state/store';
@@ -13,8 +15,9 @@ const App = ({ Component, pageProps }) => {
 
   return (
     <ThemeProvider theme={themes[theme]}>
+      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+      <DefaultSeo {...NextSeoConfig} />
       <Head>
-        <title>React Next Template</title>
         <link href="/favicon.ico" rel="icon" />
       </Head>
       <GlobalStyles />
