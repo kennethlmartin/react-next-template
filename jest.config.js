@@ -1,3 +1,7 @@
+const { loadEnvConfig } = require('@next/env');
+
+loadEnvConfig(process.env.PWD);
+
 module.exports = {
   bail: 1,
   coverageDirectory: '<rootDir>/.coverage',
