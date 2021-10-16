@@ -4,28 +4,16 @@ module.exports = {
     'archetype/rules/plugin-jsdoc',
     'archetype/rules/plugin-prettier',
   ],
-  parser: '@typescript-eslint/parser',
-  root: true,
-  rules: {
-    // TODO: Move to eslint-config-archetype
-    'import/order': [
-      'error',
-      {
-        'groups': [
-          'type',
-          'builtin',
-          'external',
-          'internal',
-          'parent',
-          'sibling',
-          'index',
-        ],
-        'newlines-between': 'always',
+  overrides: [
+    {
+      extends: ['archetype/rules/plugin-typescript'],
+      files: ['*.ts', '*.tsx'],
+      parserOptions: {
+        project: ['./tsconfig.json'],
       },
-    ],
-    // TODO: Move to eslint-config-archetype
-    'react/jsx-fragments': ['error', 'syntax'],
-  },
+    },
+  ],
+  root: true,
   settings: {
     'import/resolver': {
       node: {

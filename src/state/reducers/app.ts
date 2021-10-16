@@ -1,4 +1,5 @@
 import type { ThemeMode } from 'src/themes';
+import type { PayloadAction } from '@reduxjs/toolkit';
 
 import { createReducer } from '@reduxjs/toolkit';
 
@@ -12,7 +13,10 @@ export const INITIAL_STATE: AppState = {
   theme: 'light',
 };
 
-export const setTheme = (state: AppState, { payload }) => ({
+export const setTheme = (
+  state: AppState,
+  { payload }: PayloadAction<ThemeMode>,
+) => ({
   ...state,
   theme: payload,
 });
