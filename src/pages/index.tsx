@@ -1,3 +1,5 @@
+import type { GetStaticProps } from 'next';
+
 import { NextSeo } from 'next-seo';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
@@ -5,21 +7,21 @@ import { useTranslation } from 'next-i18next';
 import { Content } from 'src/components/Content';
 import { Layout } from 'src/components/Layout';
 
-const PageHelloWorld = () => {
+const PageHome = () => {
   const { t } = useTranslation();
 
   return (
     <Layout>
-      <NextSeo title={t('page-hello-world:meta.title')} />
+      <NextSeo title={t('page-home:meta.title')} />
       <Content>
-        <h1>{t('page-hello-world:heading')}</h1>
-        <p>{t('page-hello-world:body')}</p>
+        <h1>{t('page-home:heading')}</h1>
+        <p>{t('page-home:body')}</p>
       </Content>
     </Layout>
   );
 };
 
-export const getStaticProps = async ({ locale }) => {
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
   const i18n = await serverSideTranslations(locale);
 
   return {
@@ -29,4 +31,4 @@ export const getStaticProps = async ({ locale }) => {
   };
 };
 
-export default PageHelloWorld;
+export default PageHome;

@@ -1,23 +1,19 @@
 import configureMockStore from 'redux-mock-store';
-import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import { render } from '@testing-library/react';
 import { ThemeProvider } from '@emotion/react';
 
-import { light as lightTheme } from '../src/themes';
+import { light as lightTheme } from 'src/themes';
 
 const mockStore = configureMockStore();
 const store = mockStore({});
 
+// eslint-disable-next-line react/prop-types
 const AllTheProviders = ({ children }) => (
   <Provider store={store}>
     <ThemeProvider theme={lightTheme}>{children}</ThemeProvider>
   </Provider>
 );
-
-AllTheProviders.propTypes = {
-  children: PropTypes.node,
-};
 
 const customRender = (ui, options) => {
   return render(ui, { wrapper: AllTheProviders, ...options });

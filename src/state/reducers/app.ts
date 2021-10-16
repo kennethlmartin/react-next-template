@@ -1,11 +1,18 @@
+import type { ThemeMode } from 'src/themes';
+
 import { createReducer } from '@reduxjs/toolkit';
+
 import * as actions from 'src/state/actions';
 
-export const INITIAL_STATE = {
+interface AppState {
+  theme: ThemeMode;
+}
+
+export const INITIAL_STATE: AppState = {
   theme: 'light',
 };
 
-export const setTheme = (state, { payload }) => ({
+export const setTheme = (state: AppState, { payload }) => ({
   ...state,
   theme: payload,
 });

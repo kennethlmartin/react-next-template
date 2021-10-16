@@ -1,6 +1,4 @@
-import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
-import { Fragment } from 'react';
 
 import { Footer } from 'src/components/Footer';
 import { Header } from 'src/components/Header';
@@ -10,14 +8,14 @@ const Main = styled.main`
   padding: 1em 0;
 `;
 
-export const Layout = ({ children }) => (
-  <Fragment>
+interface Props {
+  children: React.ReactNode;
+}
+
+export const Layout = ({ children }: Props) => (
+  <>
     <Header />
     <Main>{children}</Main>
     <Footer />
-  </Fragment>
+  </>
 );
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

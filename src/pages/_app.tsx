@@ -1,5 +1,6 @@
+import type { AppProps } from 'next/app';
+
 import * as R from 'ramda';
-import PropTypes from 'prop-types';
 import Head from 'next/head';
 import { appWithTranslation } from 'next-i18next';
 import { DefaultSeo } from 'next-seo';
@@ -12,7 +13,7 @@ import { GlobalStyles } from 'src/components/GlobalStyles';
 import { selectTheme } from 'src/state/selectors';
 import { wrapper } from 'src/state/store';
 
-const App = ({ Component, pageProps }) => {
+const App = ({ Component, pageProps }: AppProps) => {
   const theme = useSelector(selectTheme);
 
   return (
@@ -27,11 +28,6 @@ const App = ({ Component, pageProps }) => {
       <Component {...pageProps} />
     </ThemeProvider>
   );
-};
-
-App.propTypes = {
-  Component: PropTypes.func,
-  pageProps: PropTypes.object,
 };
 
 export default R.compose(wrapper.withRedux, appWithTranslation)(App);

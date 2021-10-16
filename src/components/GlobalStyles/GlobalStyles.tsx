@@ -1,7 +1,10 @@
+import type { Theme, ThemeProps } from 'src/themes';
+
 import { Global, css, withTheme } from '@emotion/react';
+
 import { normalize } from './normalize';
 
-const makeGlobalStyles = (theme) => css`
+const makeGlobalStyles = (theme: Theme) => css`
   ${normalize}
 
   html {
@@ -36,6 +39,6 @@ const makeGlobalStyles = (theme) => css`
   }
 `;
 
-export const GlobalStyles = withTheme(({ theme }) => (
+export const GlobalStyles = withTheme(({ theme }: ThemeProps) => (
   <Global styles={makeGlobalStyles(theme)} />
 ));

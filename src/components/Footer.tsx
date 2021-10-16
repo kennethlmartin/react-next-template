@@ -15,6 +15,7 @@ export const Footer = () => {
 
   return (
     <Wrapper
+      // used as an example for the `css` function
       css={css`
         text-align: center;
       `}

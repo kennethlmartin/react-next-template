@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
-import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'next-i18next';
 
 import { themeSelected } from 'src/state/actions';
 import { selectTheme } from 'src/state/selectors';
+import { useAppDispatch, useAppSelector } from 'src/hooks';
 
 const Toggle = styled.span`
   cursor: pointer;
@@ -14,8 +14,8 @@ const Toggle = styled.span`
 `;
 
 export const ThemeToggle = () => {
-  const dispatch = useDispatch();
-  const theme = useSelector(selectTheme);
+  const dispatch = useAppDispatch();
+  const theme = useAppSelector(selectTheme);
   const { t } = useTranslation();
 
   const handleClick = () => {

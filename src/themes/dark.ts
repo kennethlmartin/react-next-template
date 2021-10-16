@@ -1,4 +1,6 @@
-export const dark = {
+import type { Theme } from '.';
+
+export const dark: Theme = {
   colors: {
     50: '#212121',
     100: '#424242',
