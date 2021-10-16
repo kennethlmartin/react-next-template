@@ -1,6 +1,8 @@
+<br />
+
 <div align="center">
   <a href="https://nextjs.org/">
-    <img src="https://i.ibb.co/pPBdfRv/react-next-template.png" width="360" />
+    <img src="https://i.ibb.co/mhYK2fM/react-next-template.png" width="360" />
   </a>
 </div>
 
@@ -8,9 +10,9 @@
 
 <div align="center">
 
-  [![Badge One](https://img.shields.io/badge/badge--one-4d56b2?style=for-the-badge&logoColor=white)](https://github.com/kennethlmartin/react-next-template)
-  [![Badge Two](https://img.shields.io/badge/badge--two-4d56b2?style=for-the-badge&logoColor=white)](https://github.com/kennethlmartin/react-next-template)
-  [![Badge Three](https://img.shields.io/badge/badge--three-4d56b2?style=for-the-badge&logoColor=white)](https://github.com/kennethlmartin/react-next-template)
+  [![Badge One](https://img.shields.io/badge/badge--one-e8e8e8?style=for-the-badge)](https://github.com/kennethlmartin/react-next-template)
+  [![Badge Two](https://img.shields.io/badge/badge--two-e8e8e8?style=for-the-badge)](https://github.com/kennethlmartin/react-next-template)
+  [![Badge Three](https://img.shields.io/badge/badge--three-e8e8e8?style=for-the-badge)](https://github.com/kennethlmartin/react-next-template)
 </div>
 
 ---
