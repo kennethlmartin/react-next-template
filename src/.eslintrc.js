@@ -4,6 +4,9 @@ module.exports = {
     'archetype/rules/plugin-jsdoc',
     'archetype/rules/plugin-prettier',
   ],
+  globals: {
+    process: true,
+  },
   overrides: [
     {
       extends: ['archetype/rules/plugin-typescript'],
