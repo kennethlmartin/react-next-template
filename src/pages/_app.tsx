@@ -5,16 +5,16 @@ import Head from 'next/head';
 import { appWithTranslation } from 'next-i18next';
 import { DefaultSeo } from 'next-seo';
 import { ThemeProvider } from '@emotion/react';
-import { useSelector } from 'react-redux';
 
 import * as themes from 'src/themes';
 import NextSeoConfig from 'next-seo.config';
 import { GlobalStyles } from 'src/components/GlobalStyles';
 import { selectTheme } from 'src/state/selectors';
+import { useAppSelector } from 'src/hooks';
 import { wrapper } from 'src/state/store';
 
 const App = ({ Component, pageProps }: AppProps) => {
-  const theme = useSelector(selectTheme);
+  const theme = useAppSelector(selectTheme);
 
   return (
     <ThemeProvider theme={themes[theme]}>
