@@ -42,6 +42,11 @@ export const Header = () => {
                 <a>{t('header:helloWorld')}</a>
               </Link>
             </ListItem>
+            <ListItem>
+              <Link href="/alt-layout">
+                <a>{t('header:altLayout')}</a>
+              </Link>
+            </ListItem>
           </List>
           <ThemeToggle />
         </Nav>

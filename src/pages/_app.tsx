@@ -1,4 +1,6 @@
 import type { AppProps } from 'next/app';
+import type { NextPage } from 'next';
+import type { ReactElement, ReactNode } from 'react';
 
 import * as R from 'ramda';
 import Head from 'next/head';
@@ -9,12 +11,23 @@ import { ThemeProvider } from '@emotion/react';
 import * as themes from 'src/themes';
 import NextSeoConfig from 'next-seo.config';
 import { GlobalStyles } from 'src/components/GlobalStyles';
+import { Layout } from 'src/components/Layout';
 import { selectTheme } from 'src/state/selectors';
 import { useAppSelector } from 'src/hooks';
 import { wrapper } from 'src/state/store';
 
-const App = ({ Component, pageProps }: AppProps) => {
+type NextPageWithLayout = NextPage & {
+  getLayout?: (page: ReactElement) => ReactNode;
+};
+
+type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout;
+};
+
+const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   const theme = useAppSelector(selectTheme);
+
+  const getLayout = Component.getLayout || ((page) => <Layout>{page}</Layout>);
 
   return (
     <ThemeProvider theme={themes[theme]}>
@@ -25,7 +38,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       </Head>
       <GlobalStyles />
       {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-      <Component {...pageProps} />
+      {getLayout(<Component {...pageProps} />)}
     </ThemeProvider>
   );
 };
