@@ -22,8 +22,7 @@ const PageHome = () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  // @ts-expect-error: `locale` comes from Next.js configuration.
-  const i18n = await serverSideTranslations(locale);
+  const i18n = await serverSideTranslations(locale as string);
 
   return {
     props: {
