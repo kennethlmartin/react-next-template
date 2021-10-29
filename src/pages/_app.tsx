@@ -11,13 +11,13 @@ import { ThemeProvider } from '@emotion/react';
 import * as themes from 'src/themes';
 import NextSeoConfig from 'next-seo.config';
 import { GlobalStyles } from 'src/components/GlobalStyles';
-import { Layout } from 'src/components/Layout';
+import { renderLayout as renderDefaultLayout } from 'src/components/Layout';
 import { selectTheme } from 'src/state/selectors';
 import { useAppSelector } from 'src/hooks';
 import { wrapper } from 'src/state/store';
 
 type NextPageWithLayout = NextPage & {
-  getLayout?: (page: ReactElement) => ReactNode;
+  renderLayout?: (page: ReactElement) => ReactNode;
 };
 
 type AppPropsWithLayout = AppProps & {
@@ -25,9 +25,8 @@ type AppPropsWithLayout = AppProps & {
 };
 
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
+  const renderLayout = Component.renderLayout || renderDefaultLayout;
   const theme = useAppSelector(selectTheme);
-
-  const getLayout = Component.getLayout || ((page) => <Layout>{page}</Layout>);
 
   return (
     <ThemeProvider theme={themes[theme]}>
@@ -38,7 +37,7 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
       </Head>
       <GlobalStyles />
       {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-      {getLayout(<Component {...pageProps} />)}
+      {renderLayout(<Component {...pageProps} />)}
     </ThemeProvider>
   );
 };

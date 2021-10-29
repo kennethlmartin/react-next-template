@@ -1,3 +1,5 @@
+import type { ReactElement } from 'react';
+
 import styled from '@emotion/styled';
 
 import { Footer } from 'src/components/Footer';
@@ -19,3 +21,5 @@ export const Layout = ({ children }: Props) => (
     <Footer />
   </>
 );
+
+export const renderLayout = (page: ReactElement) => <Layout>{page}</Layout>;

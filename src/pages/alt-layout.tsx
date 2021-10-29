@@ -1,5 +1,4 @@
 import type { GetStaticProps } from 'next';
-import type { ReactElement } from 'react';
 
 import { NextSeo } from 'next-seo';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -7,7 +6,7 @@ import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 
 import { Content } from 'src/components/Content';
-import { AltLayout } from 'src/components/AltLayout';
+import { renderAltLayout } from 'src/components/AltLayout';
 
 const PageAltLayout = () => {
   const { t } = useTranslation();
@@ -27,9 +26,7 @@ const PageAltLayout = () => {
   );
 };
 
-PageAltLayout.getLayout = function getLayout(page: ReactElement) {
-  return <AltLayout>{page}</AltLayout>;
-};
+PageAltLayout.renderLayout = renderAltLayout;
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   const i18n = await serverSideTranslations(locale as string);
