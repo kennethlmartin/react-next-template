@@ -17,7 +17,7 @@
     "build:analyze": "ANALYZE=true next build",
     "build:sitemap": "next-sitemap",
     "clean": "npm-run-all -s clean:cache clean:next_build clean:node_modules",
-    "clean:cache": "rimraf ./.*cache",
+    "clean:cache": "rimraf ./.*cache tsconfig.tsbuildinfo",
     "clean:next_build": "rimraf ./.next",
     "clean:node_modules": "rimraf ./node_modules",
     "lint": "npm-run-all lint:* -p",
