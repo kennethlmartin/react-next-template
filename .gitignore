@@ -4,5 +4,4 @@ tsconfig.tsbuildinfo
 *.log
 /.coverage/
 /.next/
-/.vscode/
 /node_modules/
