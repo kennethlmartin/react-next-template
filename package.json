@@ -1,6 +1,6 @@
 {
   "name": "react-next-template",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "author": "Kenneth Martin <developer@kennethmartin.me>",
   "description": "Boilerplate for Next.js projects",
   "private": true,
